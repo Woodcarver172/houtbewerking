@@ -10,18 +10,45 @@
       margin: 0;
       padding: 0;
     }
+
+    /* Header met achtergrondafbeelding */
     header {
-      background-color: #6b4f2a;
+      background-image: url('91833044-0b6a-4117-8c5f-86fe87605696.png');
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
+      position: relative;
     }
+
+    /* Optionele donkere overlay zodat tekst beter zichtbaar is */
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3); /* pas aan voor donkerder/licht */
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1; /* boven de overlay */
+      margin: 0;
+    }
+
     section {
       padding: 20px;
+      margin-bottom: 30px;
     }
+
     h2 {
       color: #6b4f2a;
     }
+
     footer {
       background-color: #ddd;
       text-align: center;
@@ -37,16 +64,15 @@
 </header>
 
 <!-- Over mij -->
-<section style="margin-bottom: 50px;">
+<section>
   <h2>Over mij</h2>
-  <p>Welkom op mijn website! Ik maak houten producten en houtsnijwerk met de hand. Dit doe ik vooral hobby-matig en ik vind het erg leuk om te doen, 
-    daarom wil ik hier een aantal van mijn creaties laten zien.</p>
+  <p>Welkom op mijn website! Ik maak houten producten en houtsnijwerk met de hand. Dit doe ik vooral hobby-matig en ik vind het erg leuk om te doen, daarom wil ik hier een aantal van mijn creaties laten zien.</p>
 </section>
 
 <!-- Mijn werk + afbeelding -->
-<section style="position: relative; margin-bottom: 50px;"> <!-- ruimte onder deze sectie -->
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    
+<section>
+  <div style="display: flex; align-items: flex-start;">
+
     <!-- Tekst links -->
     <div>
       <h2>Mijn werk</h2>
@@ -57,27 +83,26 @@
       </ul>
     </div>
 
-    <!-- Afbeelding rechts (blijft op zijn plek) -->
-    <div>
-      <img src="550f2f38-3e54-47ff-8a8f-886f60ee9cfc.jpg" 
-           width="325" 
-           style="position: absolute; right: 100; top: 0; border-radius: 10px;">
+    <!-- Afbeelding iets naar rechts -->
+    <div style="margin-left: 180px;">
+      <img src="550f2f38-3e54-47ff-8a8f-886f60ee9cfc.jpg"
+           width="300"
+           style="border-radius: 10px;">
     </div>
 
   </div>
 </section>
 
 <!-- Status -->
-<section style="margin-bottom: 50px;"> <!--zelfde margin-bottom als boven--> 
+<section>
   <h2>Status</h2>
-  <p>Hier kun je updates over je werk of projecten plaatsen.</p>
+  <p>Op dit moment neem ik geen opdrachten aan.</p>
 </section>
 
 <!-- Contact -->
 <section>
   <h2>Contact</h2>
-  <p>Email: houtenzo@email.com</p>
-  <p>Telefoon: 06-xxxxxxx</p>
+  <p>Email: <a href="mailto:paulmnagtegaal@gmail.com">paulmnagtegaal@gmail.com</a></p>
 </section>
 
 <footer>
