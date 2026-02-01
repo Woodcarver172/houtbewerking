@@ -10,12 +10,33 @@
       margin: 0;
       padding: 0;
     }
-    header {
-      background-color: #6b4f2a;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+   header {
+  background-image: url('cc0d4ce7-c479-4d89-8017-96637a59bea7.png'); /* jouw geüploade houtafbeelding */
+  background-size: cover;       /* vult de hele header */
+  background-position: center;  /* centreert de afbeelding */
+  color: white;
+  padding: 60px 20px;           /* maakt de header hoger zodat de afbeelding goed zichtbaar is */
+  text-align: center;
+  position: relative;
+}
+
+/* Overlay voor betere leesbaarheid van de tekst */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* lichte donkere overlay, pas aan als je wilt */
+  z-index: 0;
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 1; /* tekst blijft boven overlay */
+  margin: 0;
+}
     section {
       padding: 20px;
     }
